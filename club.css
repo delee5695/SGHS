@@ -80,41 +80,37 @@ p{
   font-size: 48px;
   margin-top: 20px;
 }
-#content1{
-
-  background-color: rgba(215, 220, 226, 0.4);
+#club{
+  position: relative;
+    background-color: rgba(215, 220, 226, 0.4);
+/*
   border-style: solid;
-  border-top-width: 122px;
-  border-bottom-width: 122px;
-  border-color: rgba(203, 175, 135, 0.4);
+    border-top-width: 122px;
+    border-bottom-width: 122px;
+    border-color: rgba(203, 175, 135, 0.4);
 
-
+*/
 }
-  #content1 > .nav {
-    float: left;
-    column-width: 600px;
-
-    background-color: #fff;
-    margin: 3%;
-    border: thick solid #D6C2A6;
-  }
-  #content1 > .nav > img{
-    border:solid #E7DEC8;
-    width: 90%;
-    margin: 3%;
-    padding: 2%;
-  }
-  #content1 > .article > p{
-    font-size: 24px;
-    text-align:left;
-    padding-top: 2%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 5%
-  }
-.page{
-  height: 200px;
-
+#club > img{
+  height:300px;
+  width: auto;
+  position: relative;
+}
+#club > h3{
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#club > p{
+  font-size: 18px;
+  position: absolute;
+	top: 30px;
+	width: 100%;
+	height: 100%;
+  word-break: normal;
+}
 }
   #footer{width: 100%; height: 300px; background-color:#31485F;}
   #footer > address{
