@@ -151,10 +151,8 @@ p{
     }
     @media (max-width: 480px){
       #header{height:200px;}
-      #header > .nav > li{
-        padding: 0px;
-        font-size: 18px;
-      }
+      #header.nav >li:nth-child(4){word-break: break-all;}
+
       #content2 .article_box1 {width: 100%; height: auto;}
       #content2 .article_box2 {width: 100%; height: auto;}
       #content2 .article_box3 {width: 100%; height: auto;}
