@@ -25,9 +25,6 @@
             <li><a>IR/SR</a></li>
             <li><a>FAQs</a></li>
           </div>
-
-
-
         </ul>
       </header>
 <style>
@@ -40,6 +37,11 @@
     width: 200px;
     height: 50px;
   }
+  .nav{
+    display: flex;
+    line-height: 100px;
+    float: right;
+  }
   .nav> div{
     display: flex;
     justify-content:flex-end;
@@ -49,7 +51,6 @@
     font-size: 18px;
   }
 
-  }
   a:hover{
     background-color: #DDE8F4;
     border-radius: 5px;
@@ -70,8 +71,8 @@
     }
     @media (max-width: 480px){
       #header{height:200px;}
-      #header .nav{display: flex; flex-direction: column; align-items: center; height:80px; line-height: 10px; }
-
+      #header .nav{display: flex; flex-direction: column; align-items: center; line-height: 20px; margin-top: 20px;}
+      #header .nav div{height: 50px;}
       #content2 .article_box1 {width: 100%; height: auto;}
       #content2 .article_box2 {width: 100%; height: auto;}
       #content2 .article_box3 {width: 100%; height: auto;}

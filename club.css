@@ -25,6 +25,11 @@ body{border-color: red;}
   width: 200px;
   height: 50px;
 }
+.nav{
+  display: flex;
+  line-height: 100px;
+  float: right;
+}
 .nav> div{
   display: flex;
   justify-content:flex-end;
@@ -117,8 +122,8 @@ p{
     }
     @media (max-width: 480px){
       #header{height:200px;}
-      #header .nav{display: flex; flex-direction: column; align-items: center; height:80px; line-height: 10px; }
-
+      #header .nav{display: flex; flex-direction: column; align-items: center; line-height: 20px; margin-top: 20px;}
+      #header .nav div{height: 50px;}
       #content2 .article_box1 {width: 100%; height: auto;}
       #content2 .article_box2 {width: 100%; height: auto;}
       #content2 .article_box3 {width: 100%; height: auto;}
