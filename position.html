@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="club.css">
     <title>SGHS club</title>
   </head>
@@ -11,84 +12,68 @@
       <header id="header">
         <span class="logo"><a href="https://delee5695.github.io/SGHS/sghs.html"><img src="logo.png"></a></span>
         <ul class="nav">
-          <li><a href="https://delee5695.github.io/SGHS/sghs.html">HOME</a></li>
-          <li><a href="https://delee5695.github.io/SGHS/club.html">동아리</a></li>
-          <li><a>대회</a></li>
-          <li><a>행사</a></li>
-          <li><a>학생자치</a></li>
-          <li><a>IR/SR</a></li>
-          <li><a>FAQs</a></li>
+          <div class="first">
+            <li><a href="https://delee5695.github.io/SGHS/sghs.html">HOME</a></li>
+          </div>
+          <div class="second">
+            <li><a href="https://delee5695.github.io/SGHS/club.html">동아리</a></li>
+            <li><a>대회</a></li>
+            <li><a>행사</a></li>
+          </div>
+          <div class="third">
+            <li><a>학생자치</a></li>
+            <li><a>IR/SR</a></li>
+            <li><a>FAQs</a></li>
+          </div>
+
+
+
         </ul>
-
       </header>
-      <section id="banner">
-        <img src="logo1.png">
-        <p>동아리</p>
-      </section>
-    </div>
-      <section id = "content2">
-        <article class="article_box1">
-          <a href=""><img src="bell_arte.png" ></a>
-          <div class = "text">
-            <h3>Bell'Arte</h3>
-            <p>벨아르떼는 정기적인 재능 나눔 봉사 및 공연을
-              진행하는 오케스트라 동아리입니다.<br></br></p>
-          </div>
-        </article>
-        <article class="article_box1">
-          <a href=""><img src="화용월태.png" ></a>
-          <div class = "text">
-            <h3>화용월태</h3>
-            <p>화용월태는 교내 유일무이 한국무용 공연 동아리로 한국무용 외에도
-              현대무용을 포함한 여러 장르의 춤을 익히고 공연을 합니다.</p>
-          </div>
-      </article>
-        <article class="article_box1">
-          <a href=""><img></a>
-          <div class = "text">
-            <h3>해비타트</h3>
-            <p>모두에게 안락한 집이 있는 세상'이라는 목표를 추구하며
-              학교 및 지역사회에 따뜻함을 전하는 봉사 동아리</p>
-          </div>
-        </article>
-        <article class="article_box1">
-          <a href=""><img src="다르마.png"></a>
-          <div class = "text">
-            <h3>다르마</h3>
-            <p>다르마는 법을 통해 각종 사회현상을 탐구하는
-              유일무이한 법 동아리입니다.<br></br></p>
-          </div>
-          <article class="article_box1">
-            <a href=""><img></a>
-            <div class = "text">
-              <h3>ECON</h3>
-              <p>경제학에 심리학을 접목해 돈을 다루는
-                인간의 마음을 해석하는 행동경제학동아리입니다.</p>
-            </div>
-          </article>
-          <article class="article_box1">
-            <a href=""><img></a>
-            <div class = "text">
-              <h3>VANK@SGHS</h3>
-              <p>청소년 외교관 역할을 하고자 모인 동아리로,
-                우리 역사와 문화를 알아가고 이를 전하는 것을 목표로 합니다.</p>
-            </div>
-        </article>
-        <article class="article_box1">
-          <a href=""><img></a>
-          <div class = "text">
-            <h3>ARTBEAT</h3>
-            <p>예술경영 동아리 아트비트는 미술, 음악, 공연, 영상
-              분야별 문화 체험과 예술경영 학술 활동을 진행합니다.</p>
-          </div>
-        </article>
-      </section>
+<style>
+  #header{width:100%; height: 100px; border-bottom: medium solid #31485F; }
 
-      <footer id="footer">
-        <address>
-          [03066]서울 종로구 성균관로13길 40 (명륜1가, 서울국제고등학교)
-        </address>
-      </footer>
+  .logo >a >img{
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 200px;
+    height: 50px;
+  }
+  .nav> div{
+    display: flex;
+    justify-content:flex-end;
+  }
+  .nav > div >li{
+    padding: 10px;
+    font-size: 18px;
+  }
 
-  </body>
-</html>
+  }
+  a:hover{
+    background-color: #DDE8F4;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  @media (max-width: 1024px){
+    #wrap{width: 100%;}
+    #content2 .article_box1 {width: 50%;}
+    #content2 .article_box2 {width: 50%;}
+    #content2 .article_box3 {width: 50%;}
+  }
+  @media (max-width: 768px){
+    #header{display: flex; flex-direction: column; align-items: center; height: auto;}
+    #header .nav .first{display: none;}
+    #header .nav.active{display: flex;}
+    #header .nav li{margin-top: 0px; margin: bottom: 0px;}
+
+    }
+    @media (max-width: 480px){
+      #header{height:200px;}
+      #header .nav{display: flex; flex-direction: column; align-items: center; height:80px; line-height: 10px; }
+
+      #content2 .article_box1 {width: 100%; height: auto;}
+      #content2 .article_box2 {width: 100%; height: auto;}
+      #content2 .article_box3 {width: 100%; height: auto;}
+
+</style>
