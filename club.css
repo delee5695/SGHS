@@ -80,36 +80,43 @@ p{
   font-size: 48px;
   margin-top: 20px;
 }
-#club{
-  position: relative;
-    background-color: rgba(215, 220, 226, 0.4);
-/*
-  border-style: solid;
-    border-top-width: 122px;
-    border-bottom-width: 122px;
-    border-color: rgba(203, 175, 135, 0.4);
-
-*/
-}
-#club > img{
-  height:300px;
-  width: auto;
+#content2 {overflow: hidden;background-color: #DDE8F4;}
+#content2 > .article_box1 {
+  float: left;
+  width: 33.3333%;
+  height: 300px;
   position: relative;
 }
-#club > h3{
+#content2 > .article_box1 > a > img{
+  width: 90%;
+  border: solid #D6C2A6;
+  border-radius: 20px;
+  background-color: white;
+  height: 250px;
+  object-fit: contain;
+}
+#content2>.article_box1 > .text{
   position: absolute;
-  top: 10px;
-  width: 100%;
-  height: 100%;
+  top: 60px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: rgba(215, 220, 226, 0.7);
+}
+.text:hover{
+  display: none;
+}
+#content2 > .article_box1 > .text >h3{
+  padding-top: 50px;
   text-align: center;
+
 }
-#club > p{
+#content2 > .article_box1 > .text > p{
   font-size: 18px;
-  position: absolute;
-	top: 30px;
-	width: 100%;
-	height: 100%;
-  word-break: normal;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 30px;
+
 }
 }
   #footer{width: 100%; height: 300px; background-color:#31485F;}
@@ -121,7 +128,13 @@ p{
     line-height: 300px;
     margin-left: 5%;
   }
-
+  /* 화면 너비 0~1024px*/
+  @media (max-width: 1024px){
+    #wrap{width: 100%;}
+    #content2 .article_box1 {width: 50%;}
+    #content2 .article_box2 {width: 50%;}
+    #content2 .article_box3 {width: 50%;}
+  }
   @media (max-width: 768px){
     #header{display: flex; flex-direction: column; align-items: center; height: auto;}
     #header .nav >li:first-child{display: none;}
@@ -134,6 +147,10 @@ p{
       right: 30px;
       margin-top: 30px;
       color: #31485F;
+
     }
     @media (max-width: 480px){
       #header{height:200px;}
+      #content2 .article_box1 {width: 100%; height: auto;}
+      #content2 .article_box2 {width: 100%; height: auto;}
+      #content2 .article_box3 {width: 100%; height: auto;}
