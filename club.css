@@ -151,6 +151,10 @@ p{
     }
     @media (max-width: 480px){
       #header{height:200px;}
+      .nav > li{
+        padding: 0px;
+        font-size: 18px;
+      }
       #content2 .article_box1 {width: 100%; height: auto;}
       #content2 .article_box2 {width: 100%; height: auto;}
       #content2 .article_box3 {width: 100%; height: auto;}
