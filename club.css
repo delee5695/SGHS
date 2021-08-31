@@ -151,7 +151,7 @@ p{
     }
     @media (max-width: 480px){
       #header{height:200px;}
-      .nav > li{
+      #header > .nav > li{
         padding: 0px;
         font-size: 18px;
       }
