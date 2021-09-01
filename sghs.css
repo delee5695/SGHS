@@ -107,9 +107,8 @@ p{
   margin: 3% 3% 3% 3%;
   line-height: 150%;
   font-size: 18px;
-  vertical-align:bottom;
-
 }
+
 
 #content2 {overflow: hidden;background-color: #DDE8F4; margin-bottom: 50px;}
 #content2 > .article_box1 {
