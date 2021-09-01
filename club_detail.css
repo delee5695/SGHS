@@ -119,7 +119,7 @@ p{
   #footer{width: 100%; height: 300px; background-color:#31485F;}
   #footer > address{
     text-align: left;
-    color: #31485F;
+    color: #fff;
     font-size: 18px;
     font-style: normal;
     line-height: 300px;
