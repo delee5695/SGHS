@@ -65,6 +65,7 @@ p{
 }
 #content2 > .article_box1 > a > img{
   width: 90%;
+  opacity: 80%;
   border: solid #D6C2A6;
   border-radius: 20px;
   background-color: white;
@@ -79,13 +80,20 @@ p{
   margin-right: 5%;
   background-color: rgba(215, 220, 226, 0.7);
 }
-.text:hover{
+#content2 > .article_box1 > a >img:hover{
+  opacity: 100%;
+}
+.article_box1 >a:hover~.text{
   display: none;
+  cursor:pointer;
+}
+.text:hover > h3 . p{
+  display: none;
+  cursor: pointer;
 }
 #content2 > .article_box1 > .text >h3{
   padding-top: 50px;
   text-align: center;
-
 }
 #content2 > .article_box1 > .text > p{
   font-size: 18px;
