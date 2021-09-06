@@ -1,0 +1,476 @@
+* {margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  color: #000;
+  font-family: 'SeoulNamsanM';
+}
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{border-color: red;}
+#wrap{width:100%; margin:0 auto;}
+#header{width:100%; height: 100px; border-bottom: medium solid #31485F; }
+
+.logo >img{
+  float: left;
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 200px;
+  height: 50px;
+}
+.nav{
+  display: flex;
+  line-height: 100px;
+  justify-content:flex-end;
+}
+.nav > li{
+  padding: 10px;
+  font-size: 18px;
+}
+.toggle{
+  position: relative;
+  transition: .3s ease-in-out;
+  width: 45px;
+  height: 34px;
+}
+.toggle > span{
+  position: absolute;
+  height: 8px;
+  border-radius: 4px;
+  width:100%;
+  background: #31485F;
+  top: 0;
+}
+.toggle. > span:nth-child(1){
+  top:0;
+}
+.toggle > span:nth-child(2),.toggle > span:nth-child(3){
+  top:13px;
+}
+.toggle > span:nth-child(4){
+  top:26px;
+}
+.toggle.active > span:nth-child(1),
+.toggle.active > span:nth-child(4){
+  opacity: 0;
+
+}
+a:hover{
+  background-color: #DDE8F4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#banner{width: 100%; height: 280px; }
+img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 230px;
+  margin-top: 30px;
+}
+p{
+  text-align: center;
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+
+/** Venn Diagram **/
+
+main {
+  /*  outline: 1px dotted #ccc; */
+  width: calc(100% * var(--venn-width-mult));
+  margin: 0 auto;
+}
+
+:root {
+  --venn-width-mult: 0.5;
+}
+
+@media print {
+  :root {
+    --venn-width-mult: 0.4;
+  }
+}
+
+/* Defaults for browsers that do not support shape-outside */
+@media (min-width: 800px) {
+  .Venn::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1px;
+    clear: both;
+  }
+
+  .circle,
+  .shape {
+    box-sizing: border-box;
+    border: 0.1em solid rgba(0, 0, 0, 0.5);
+    margin: 0 0.75%;
+    padding: 0 1.5em;
+    float: left;
+    width: 32%;
+  }
+
+  .circle.one {
+    margin-left: 0;
+  }
+
+  .circle.three {
+    margin-right: 0;
+  }
+
+  .shape {
+    width: 30%;
+    margin: 1em 1%;
+  }
+
+  .shape.onetwo {
+    margin-left: 2.5%;
+    clear: left;
+    border-top-right-radius: 1em;
+  }
+
+  .shape.twothree {
+    margin-right: 2.5%;
+    border-top-left-radius: 1em;
+  }
+
+  .shape.onethree {
+    margin-top: 3em;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+  }
+
+  .shape.onetwothree {
+    clear: both;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 1.5em;
+  }
+}
+@supports (shape-outside: polygon(0 0, 0 50%, 50% 50%)) {
+  .Venn::after {
+    display: none;
+  }
+
+  .Venn > div {
+    box-sizing: border-box;
+    border: 0.1em solid rgba(0, 0, 0, 0.5);
+    font-size: calc(2.5vw * var(--venn-width-mult));
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .Venn > .shape {
+    font-size: calc(2.25vw * var(--venn-width-mult));
+    border: initial;
+    width: initial;
+    margin: initial;
+    padding: initial;
+  }
+
+  .Venn > .circle {
+    border-radius: 50%;
+    width: initial;
+    margin: initial;
+    padding: initial;
+  }
+
+   .Venn > img {
+     top: 100px;
+   }
+
+  /* Grid layout  */
+  .Venn {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, calc(28.8vw * var(--venn-width-mult)));
+  }
+
+  .Venn > .circle.one {
+    /*   outline: .2em solid #f00; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .Venn > .circle.two {
+    /*   outline: .2em solid #0f0; */
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .Venn > .circle.three {
+    /*   outline: .2em solid #00f; */
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .Venn > .shape.onetwo {
+   /*   outline: .2em solid #ff0; */
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 2;
+  }
+
+ .Venn > .shape.onethree {
+   /*   outline: .2em solid #f0f; */
+   grid-column-start: 2;
+   grid-column-end: 4;
+   grid-row-start: 2;
+   grid-row-end: 2;
+  }
+
+ .Venn > .shape.twothree {
+   /*   outline: .2em solid #0ff; */
+   grid-column-start: 3;
+   grid-column-end: 5;
+   grid-row-start: 2;
+   grid-row-end: 2;
+  }
+
+ .Venn > .shape.onetwothree {
+   /*   outline: .2em solid #fff; */
+   grid-column-start: 3;
+   grid-column-end: 3;
+   grid-row-start: 2;
+   grid-row-end: 2;
+  }
+
+  /* Text wrap */
+  .Venn .circle,
+  .Venn .shape {
+    text-align: center;
+  }
+  .Venn .circle span,
+  .Venn .shape span {
+    box-sizing: border-box;
+    float: right;
+    /*     border: 1px dotted #00f;
+    background-color: rgba(0,0,0,.1); */
+  }
+  .Venn .circle > span {
+    width: calc(58.5vw * var(--venn-width-mult));
+    height: calc(58.5vw * var(--venn-width-mult));
+  }
+  .Venn .shape > span {
+    height: calc(29vw * var(--venn-width-mult));
+  }
+  .Venn .one > span {
+    float: left;
+    width: 32%;
+    shape-margin: 0;
+    shape-outside: polygon(
+      100% 0%,
+      0% 0%,
+      0% 100%,
+      100% 100%,
+      100% 92%,
+      76% 88%,
+      44% 80%,
+      20% 70%,
+      10% 60%,
+      5% 50%,
+      10% 40%,
+      20% 30%,
+      41% 20%,
+      70% 10%,
+      100% 5%
+    );
+  }
+  .Venn .one > span + span {
+    float: right;
+    width: 66%;
+    shape-outside: polygon(
+      100% 0%,
+      40% 0%,
+      65% 15%,
+      53% 25%,
+      47% 35%,
+      44% 45%,
+      43% 50%,
+      31% 55%,
+      12% 65%,
+      5% 75%,
+      0% 85%,
+      0% 100%,
+      100% 100%
+    );
+  }
+  .Venn .two > span {
+    float: left;
+    width: 66%;
+    shape-margin: 0;
+    shape-outside: polygon(
+      0% 0%,
+      60% 0%,
+      35% 15%,
+      47% 25%,
+      53% 35%,
+      56% 45%,
+      57% 50%,
+      69% 55%,
+      88% 65%,
+      95% 75%,
+      100% 85%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  .Venn .two > span + span {
+    float: right;
+    width: 32%;
+    shape-outside: polygon(
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%,
+      0% 92%,
+      24% 88%,
+      56% 80%,
+      80% 70%,
+      90% 60%,
+      95% 50%,
+      90% 40%,
+      80% 30%,
+      59% 20%,
+      30% 10%,
+      0% 5%
+    );
+  }
+  .Venn .three > span {
+    float: left;
+    width: 49%;
+    shape-margin: 0;
+    shape-outside: polygon(
+      0% 0%,
+      100% 0%,
+      100% 40%,
+      75% 47%,
+      50% 50%,
+      2% 50%,
+      5% 60%,
+      13% 70%,
+      27% 80%,
+      52% 90%,
+      78% 95%,
+      100% 97%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  .Venn .three > span + span {
+    float: right;
+    shape-outside: polygon(
+      100% 0%,
+      0% 0%,
+      0% 40%,
+      25% 47%,
+      50% 50%,
+      98% 50%,
+      95% 60%,
+      87% 70%,
+      73% 80%,
+      48% 90%,
+      22% 95%,
+      0% 97%,
+      0% 100%,
+      100% 100%
+    );
+  }
+  .Venn .onetwo > span {
+   float: left;
+   width: 49%;
+   shape-margin: 0;
+   shape-outside: polygon(
+     0% 0%,
+     100% 0%,
+     100% 30%,
+     72% 40%,
+     48% 50%,
+     20% 70%,
+     10% 85%,
+     0% 98%,
+     100% 98%,
+     100% 100%,
+     0% 100%
+   );
+ }
+ .Venn .onetwo > span + span {
+   float: right;
+   shape-outside: polygon(
+     100% 0%,
+     0% 0%,
+     0% 30%,
+     28% 40%,
+     52% 50%,
+     80% 70%,
+     90% 85%,
+     100% 98%,
+     0% 98%,
+     0% 100%,
+     100% 100%
+   );
+ }
+
+ /* Custom styles */
+
+  .lol .one {
+    background-color: rgba(144, 53, 53, 0.5);
+    border-color: transparent;
+  }
+
+  .lol .one:hover,
+  .lol .one:focus {
+    background-color: rgba(144, 53, 53, 1);
+  }
+
+  .lol .two {
+    background-color: rgba(41, 41, 41, 0.5);
+    border-color: transparent;
+  }
+
+  .lol .two:hover,
+  .lol .two:focus {
+    background-color: rgba(41, 41, 41, 1);
+  }
+
+  .lol .three {
+    background-color: rgba(15, 109, 31, 0.7);
+    border-color: transparent;
+  }
+
+  .lol .three:hover,
+  .lol .three:focus {
+    background-color: rgba(15, 109, 31, 1);
+  }
+
+  .lol .circle:hover,
+  .lol .circle:focus {
+    z-index: 2;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .lol .circle {
+    position: relative;
+  }
+
+  .lol:hover > div, .lol:focus-within > div {
+    overflow: visible;
+  }
