@@ -1,0 +1,18 @@
+main{height: 50%; display: block; background-color: #DDE8F4; padding-bottom: 10%; padding-top: 3%;margin-bottom: 10%x;}
+#main > img{width:25%;margin-top: 10%x;padding: 15%;background-color: #fff; border-radius: 50%; margin-top: 100px;}
+#sub{text-align: center;position: absolute;margin-top: 15%;width: 9%}
+.edu{left: 47%;top:50%;}
+.adv{left: 27%; top: 80%}
+.plan{right: 27%; top: 80%;}
+.fin{left: 35%; top: 120%;}
+.auto{right: 35%; top: 120%;}
+#sub > a >img{width: 70%;}
+#sub:hover{background-color:#DDE8F4; border-radius: 50%;}
+
+@media (max-width: 1024px){
+  #main{padding-bottom: 10%;}
+  #sub {position: inherit; width: 100%;padding: 5%; margin-top: 0;border-top: dashed #31485F;}
+  #sub > a > img{width: 10%}
+  #sub:last-child{border-bottom: dashed #31485F;}
+  #sub:hover{background-color: #fff; border-radius: 0;}
+}

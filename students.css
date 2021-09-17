@@ -84,15 +84,24 @@ p{
 /** Venn Diagram **/
 
 main {
-  /*  outline: 1px dotted #ccc; */
-  width: calc(100% * var(--venn-width-mult));
-  margin: 0 auto;
-}
+  /*  outline: 1px dotted #ccc;
+  width: calc(100% * var(--venn-width-mult))*/;
+  margin: 0 auto 100px auto;
+  padding: 30px 0 30px 0;
+  background-color: #DDE8F4;
 
+}
+main > article{width:calc(100% * var(--venn-width-mult)); padding-left: 25% }
 :root {
   --venn-width-mult: 0.5;
 }
-
+main article div a img{
+  width:calc(100% * var(--venn-width-mult));
+  width: 100%;
+  margin-top: 0;
+  opacity: 70%;
+}
+main article div a img:hover{opacity: 100%}
 @media print {
   :root {
     --venn-width-mult: 0.4;
@@ -194,6 +203,11 @@ main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, calc(28.8vw * var(--venn-width-mult)));
+    align-items: baseline;
+  }
+  @media (max-width: 480px){
+    .Venn {display: block;
+    }
   }
 
   .Venn > .circle.one {
@@ -467,10 +481,59 @@ main {
     overflow: hidden;
   }
 
+  /*겹치기
   .lol .circle {
     position: relative;
-  }
+  }*/
 
   .lol:hover > div, .lol:focus-within > div {
-    overflow: visible;
+    overflow: hidden;
+  }
+  /* 화면 너비 0~1024px*/
+  @media (max-width: 1024px){
+    #wrap{width: 100%;}
+    #content2 .article_box1 {width: 50%;}
+    #content2 .article_box2 {width: 50%;}
+    #content2 .article_box3 {display: none;}
+  }
+
+
+  /* 화면 너비 0~768px */
+  @media (max-width: 768px){
+    #header{display: flex; flex-direction: column; align-items: center; height: auto;}
+    #header .nav .first{display: none;}
+    #header .nav.active{display: flex;}
+    #header .nav li{margin-top: 0px; margin: bottom: 0px;}
+
+    .toggle{
+      display:block;
+      position: absolute;
+      right: 30px;
+      margin-top: 30px;
+      color: #31485F;
+    }
+    #content1{height: auto;}
+    #content1 .nav{width: 100%;height: auto; margin: 20px 10% 20px 10% }
+    #content1 .nav >img{width: 80%;}
+    #content1 .article{width: 80%; margin: 20px 10% 20px 10%; height: auto;}
+
+    #content2 .article_box1 {width: 100%; height: auto;}
+    #content2 .article_box2 {width: 100%; height: auto;}
+    #content3 .nav{width: 95%;height: auto;}
+    #content3 .article{width: 95%;height: auto;}
+
+
+  }
+
+  /* 화면 너비 0~480px */
+
+  @media (max-width: 480px){
+    #header{height:200px;}
+    #header .nav{display: flex; flex-direction: column; align-items: center; line-height: 10px; margin-top: 20px;}
+    #header .nav div{height: 50px;}
+    #content1 .nav {width: 95%; height: 200px;}
+    .Venn{display: block;}
+    #content3 .nav {width: 100%; height: 200px;}
+    #content3 .article {width: 100%; height: auto;}
+    #footer > address > pre{margin-left: 2%;}
   }
