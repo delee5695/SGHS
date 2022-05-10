@@ -69,33 +69,7 @@ background-color: #DDE8F4;
 border-radius: 5px;
 cursor: pointer;
 }
-#banner{width: 100%; height: 200px;}
-img{
-margin-left: auto;
-margin-right: auto;
-display: block;
-width: 105px;
-margin-top: 30px;
-}
-#banner > p{
-text-align: center;
-font-size: 60px;
-margin-top: 50px;
-color: black;
 
-}
-p{
-text-align: left;
-font-size: 18px;
-margin-top: 20px;
-}/*
-#content1{
-border-style: solid;
-border-top-width: 122px;
-border-bottom-width: 122px;
-border-color: rgba(203, 175, 135, 0.4);
-z-index: 1;
-}*/
 #content1{
 padding-top: 122px;
 padding-bottom: 122px;
@@ -111,7 +85,8 @@ margin-bottom: 30px;
 #content1 > div > p{
 font-size: 30px;
 font-weight: bold;
-margin-left: 3%
+margin-left: 3%;
+text-align: left;
 }
 #content1 > div > div{
 padding-left: 6%

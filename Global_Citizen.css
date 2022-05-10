@@ -1,0 +1,162 @@
+* {margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  color: #000;
+  font-family: 'SeoulNamsanM';
+}
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{border-color: red;}
+#wrap{width:100%; margin:0 auto;}
+#header{width:100%; height: 100px; border-bottom: medium solid #31485F; }
+
+.logo >a >img{
+  float: left;
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 200px;
+  height: 50px;
+}
+.nav{
+  display: flex;
+  line-height: 90px;
+  float: right;
+}
+.nav> div{
+  display: flex;
+  justify-content:flex-end;
+}
+.nav > div >li{
+  padding: 10px;
+  font-size: 18px;
+}
+a:hover{
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#banner{width: 100%; height: 280px; text-align: center; }
+img{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+  margin-top: 10px;
+}
+p{
+  text-align: center;
+  font-size: 48px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#content1{
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 700px;
+  text-align: center;
+}
+#content1 img{
+  height: 100%;
+}
+
+.slide{height:auto;overflow:hidden;}
+    .slide ul{width:calc(100% * 4);display:flex;animation:slide 10s infinite;} /* slide를 8초동안 진행하며 무한반복 함 */
+    .slide li{width:calc(100% / 4);height: 650px;}
+    .slide li{background-color: #fff;}
+    .slide li img{width: 95%; border-radius: 20px;}
+    @keyframes slide {
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      50% {margin-left:-200%;}
+      60% {margin-left:-200%;}
+      75% {margin-left:-300%;}
+      85% {margin-left:-300%;}
+      100% {margin-left:0;}
+    }
+#content2 {
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: auto;
+  background-color: #C3D1DF;
+}
+#content2 h2{
+  padding: 10px;
+}
+#content2 > article {
+  float: left;
+  height: 300px;
+  margin-bottom: 20px;
+  width: 30%;
+  overflow: auto;
+  border-radius: 20px;
+  margin:1.5%;
+  background-color: #fff;
+}
+
+#content2 > article > a img{
+  width: 80%;
+  /*padding: 2%;*/
+  /*border: thick solid #E7DEC8;*/
+  border-radius: 25px;
+  height: 250px;
+}
+#content2 > article > p{
+  font-size: 20px;
+  text-align: center;
+}
+
+#content2 > article >h3 >a:hover{background-color: #fff}
+
+
+
+
+#footer{width: 100%; height: 300px; background-color:#31485F;vertical-align: middle;line-height: 30px; display: flex;}
+#footer > address > pre{
+  text-align: left;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  margin-left: 5%;
+}
+address > pre> a{
+  color: #fff
+}
+
+
+@media (max-width: 1024px){
+  #wrap{width: 100%;}
+  #content2 .article_box1 {width: 47%; height:default;}
+  #content2 .article_box2 {width: 47%;}
+  #content2 .article_box3 {width: 47%;}
+}
+@media (max-width: 768px){
+  #header{display: flex; flex-direction: column; align-items: center; height: auto;}
+  #header .nav .first{display: none;}
+  #header .nav.active{display: flex;}
+  #header .nav li{margin-top: 0px; margin: bottom: 0px;}
+  #content1{height: 500px;}
+  .slide li {height: 450px;}
+  }
+  @media (max-width: 480px){
+    #header{height:200px;}
+    #header .nav{display: flex; flex-direction: column; align-items: center; line-height: 20px; margin-top: 20px;}
+    #header .nav div{height: 50px;}
+    #content1{height: 300px;}
+    .slide li{height: 250px;}
+    #content2 .article_box1 {margin: 2.5%;width: 95%; }
+    #content2 .article_box2 {width: 97%;}
+    #content2 .article_box3 {width: 97%; }
+    #footer > address > pre{margin-left: 2%;}
